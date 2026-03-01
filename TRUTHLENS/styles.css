@@ -241,6 +241,11 @@ img {
 
 .animate-slide-up {
   animation: slideUp 0.8s ease forwards;
+  opacity: 1;
+  /* Fail-safe default */
+}
+
+.js-enabled .animate-slide-up {
   opacity: 0;
 }
 
@@ -262,9 +267,14 @@ img {
 
 /* Scroll Reveal Classes (Handled by JS) */
 .reveal {
-  opacity: 0;
+  opacity: 1;
+  /* Fail-safe default */
   transform: translateY(40px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.js-enabled .reveal {
+  opacity: 0;
 }
 
 .reveal.active {
